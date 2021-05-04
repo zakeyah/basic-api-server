@@ -51,3 +51,6 @@ function deleteClothes (req,res){
   });
 }
 module.exports=router;
+
+
+
