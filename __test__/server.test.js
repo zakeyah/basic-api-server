@@ -45,6 +45,7 @@ describe('Testing Server',()=>{
       name: "pants",
       price: 20
     });
+    console.log('response',response.body.record)
     expect(response.status).toEqual(200);
     
   });
