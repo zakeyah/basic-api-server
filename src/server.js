@@ -9,11 +9,12 @@ const foodsRoutter = require('./routes/foods');
 const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(logger);
 app.use(express.json());
 app.use(clothesRouter);
 app.use(foodsRoutter);
-app.use(cors());
+
 
 app.get('/',(req,res)=>{
   res.send('servar is working');
