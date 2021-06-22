@@ -30,7 +30,7 @@ class Foods{
   delete(id){
     let deleted = false;
     this.db = this.db.filter((obj)=> {
-      if (obj._id != id) {
+      if (obj._id === id) {
         return true;
       } else {
         deleted = true;
