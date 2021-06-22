@@ -14,17 +14,14 @@ class Foods{
     }
   }
   create(obj){
-    let record={
-      id: ++this.id,
-      record: obj
-    };
-    this.db.push(record);
-    return record;
+  
+    this.db.push(obj);
+    return obj;
   }
   update(id,obj){
     for(let i=0;i<this.db.length;i++){
-      if(this.db[i].id==id){
-        this.db[i].record=obj;
+      if(this.db[i]._id==id){
+        this.db[i]=obj;
         return this.db[i];
       }
     }
@@ -33,7 +30,7 @@ class Foods{
   delete(id){
     let deleted = false;
     this.db = this.db.filter((obj)=> {
-      if (obj.id != id) {
+      if (obj._id != id) {
         return true;
       } else {
         deleted = true;
