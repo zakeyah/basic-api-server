@@ -9,11 +9,11 @@ const validator= require('../middleware/validator');
 const foodsInstance= new Foods;
 
 
-router.get('/food', geFoods);
-router.get('/food/:id',validator, getOneFoods);
-router.post('/food', createFoods);
-router.put('/food/:id',validator, updateFoods);
-router.delete('/food/:id',validator, deleteFoods);
+router.get('/todo', geFoods);
+router.get('/todo/:id',validator, getOneFoods);
+router.post('/todo', createFoods);
+router.put('/todo/:id',validator, updateFoods);
+router.delete('/todo/:id',validator, deleteFoods);
 
 
 function geFoods(req,res){
